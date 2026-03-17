@@ -25,13 +25,6 @@ const Hero = () => (
     </div>
     <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-24 lg:py-32 text-center">
       <motion.div {...fadeUp}>
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-saffron/20 border border-brand-saffron/40 text-brand-saffron text-xs font-bold uppercase tracking-widest mb-6">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-brand-saffron opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-saffron" />
-          </span>
-          24/7 Emergency Legal Aid
-        </div>
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
           Justice for those who{" "}
           <span className="text-brand-saffron">need it most.</span>
