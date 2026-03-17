@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, ArrowRight, ShieldCheck, Heart, Users, Scale } from "lucide-react";
-import heroImg from "@/assets/hero-punjab.jpg";
-import aboutImg from "@/assets/about-helping.jpg";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+// Unsplash images
+const aboutImg = "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=80";
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
@@ -13,67 +13,50 @@ const fadeUp = {
 };
 
 const Hero = () => (
-  <section className="relative pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden bg-mesh">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+  <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    {/* Hero background image */}
+    <div className="absolute inset-0 z-0">
+      <img
+        src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1920&q=85"
+        alt=""
+        className="w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-brand-navy/75" />
+    </div>
+    <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-24 lg:py-32 text-center">
       <motion.div {...fadeUp}>
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-saffron/10 border border-brand-saffron/20 text-brand-saffron text-xs font-bold uppercase tracking-widest mb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-saffron/20 border border-brand-saffron/40 text-brand-saffron text-xs font-bold uppercase tracking-widest mb-6">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-brand-saffron opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-saffron" />
           </span>
           24/7 Emergency Legal Aid
         </div>
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-brand-navy leading-[1.1] mb-6 tracking-tight">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
           Justice for those who{" "}
-          <span className="text-gradient-navy">need it most.</span>
+          <span className="text-brand-saffron">need it most.</span>
         </h1>
-        <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed font-body">
+        <p className="text-base sm:text-lg text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed font-normal">
           Dedicated to providing free legal support to the underprivileged in Punjab. Your financial status should never be a barrier to your rights.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <Link
             to="/contact"
-            className="bg-brand-navy text-primary-foreground px-6 sm:px-8 py-4 rounded-3xl font-bold flex items-center gap-2 hover:shadow-brand transition-brand active:scale-95 text-sm sm:text-base"
+            className="bg-brand-saffron text-brand-navy px-6 sm:px-8 py-4 rounded-3xl font-bold flex items-center gap-2 hover:opacity-90 transition-brand active:scale-95 text-sm sm:text-base"
           >
             Get Free Legal Help Now <ArrowRight className="w-5 h-5" />
           </Link>
           <a
             href="tel:123"
-            className="bg-card border border-border text-foreground px-6 sm:px-8 py-4 rounded-3xl font-bold flex items-center gap-2 hover:bg-secondary transition-brand text-sm sm:text-base"
+            className="bg-white/10 border border-white/30 text-white px-6 sm:px-8 py-4 rounded-3xl font-bold flex items-center gap-2 hover:bg-white/20 transition-brand text-sm sm:text-base"
           >
             <Phone className="w-5 h-5" /> Call 123
           </a>
         </div>
       </motion.div>
-      <motion.div
-        initial={{ scale: 0.92, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: [0.2, 0, 0, 1] }}
-        className="relative"
-      >
-        <div className="rounded-4xl overflow-hidden shadow-2xl">
-          <img
-            src={heroImg}
-            alt="Punjab landscape"
-            className="w-full h-[350px] sm:h-[450px] lg:h-[550px] object-cover"
-            loading="eager"
-          />
-        </div>
-        <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-card p-6 sm:p-8 rounded-3xl shadow-xl max-w-xs border border-border">
-          <div className="flex gap-1 mb-2">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <Heart key={i} className="w-4 h-4 fill-brand-saffron text-brand-saffron" />
-            ))}
-          </div>
-          <p className="text-sm font-medium text-foreground italic">
-            "They helped my family when we had nowhere else to turn. Truly a blessing for Punjab."
-          </p>
-          <p className="text-xs text-muted-foreground mt-2">— Local Resident, Mohali</p>
-        </div>
-      </motion.div>
     </div>
   </section>
-);
+);;
 
 const Stats = () => (
   <section className="py-16 bg-card border-y border-border">
@@ -111,8 +94,8 @@ const Services = () => {
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">How We Help</h2>
-          <p className="text-muted-foreground">Comprehensive legal support designed for accessibility and speed.</p>
+          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-brand-navy mb-4">How We Help</h2>
+          <p className="text-muted-foreground font-normal">Comprehensive legal support designed for accessibility and speed.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {services.map((s, i) => (
@@ -128,7 +111,7 @@ const Services = () => {
                 <span className="text-brand-navy">{s.icon}</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-display font-bold text-brand-navy mb-4">{s.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
+              <p className="text-muted-foreground leading-relaxed font-normal">{s.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -158,13 +141,13 @@ const AboutPreview = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-6">
+        <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-brand-navy mb-6">
           Justice is a Right, Not a Luxury
         </h2>
-        <p className="text-muted-foreground leading-relaxed mb-4">
+        <p className="text-muted-foreground leading-relaxed mb-4 font-normal">
           Jain & Associates was founded with a singular mission: to ensure that every individual, regardless of their financial status, has access to quality legal representation.
         </p>
-        <p className="text-muted-foreground leading-relaxed mb-8">
+        <p className="text-muted-foreground leading-relaxed mb-8 font-normal">
           Operating across multiple offices in Punjab, we bridge the gap between legal expertise and those who need it most.
         </p>
         <div className="flex items-center gap-6">
@@ -195,10 +178,10 @@ const CTA = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold mb-6">
           Need Legal Help? We're Here for You.
         </h2>
-        <p className="text-primary-foreground/70 text-lg mb-10 max-w-2xl mx-auto">
+        <p className="text-primary-foreground/70 text-lg mb-10 max-w-2xl mx-auto font-normal">
           Don't let your financial situation stop you from getting justice. Reach out to us — it's completely free.
         </p>
         <div className="flex flex-wrap justify-center gap-4">

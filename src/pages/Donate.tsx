@@ -19,18 +19,25 @@ const Donate = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <section className="pt-28 pb-20 lg:pt-36 lg:pb-28 bg-mesh">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+      <section className="relative py-32 lg:py-44 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&q=85"
+            alt=""
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-brand-navy/70" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-brand-navy leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold text-white leading-tight mb-6">
               Support Our Cause
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/80 leading-relaxed font-normal max-w-2xl mx-auto">
               Your donation helps us provide free legal aid to those who need it most. Every rupee makes a difference.
             </p>
           </motion.div>

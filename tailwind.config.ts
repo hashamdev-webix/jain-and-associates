@@ -65,8 +65,8 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Instrument Sans"', 'sans-serif'],
-        body: ['"Public Sans"', 'sans-serif'],
+        display: ['"Poppins"', 'sans-serif'],
+        body: ['"Poppins"', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
