@@ -8,21 +8,21 @@ const punjabImg = "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?
 const offices = [
   {
     city: "Mohali",
-    address: "Phase 7, Industrial Area, Sector 73, Mohali, Punjab",
+    address: "Mohali, Punjab India",
     phone: "123",
     hours: "Mon–Sat: 9:00 AM – 6:00 PM",
   },
   {
     city: "Fatehgarh Sahib",
-    address: "Near Gurudwara Jyoti Sarup, Main Road, Fatehgarh Sahib",
+    address: "Fatehgarh Sahib, Punjab India",
     phone: "123",
     hours: "Mon–Sat: 9:00 AM – 6:00 PM",
   },
   {
-    city: "Chandigarh",
-    address: "Sector 17, Near District Court Complex, Chandigarh",
+    city: "Khamano",
+    address: "Khamano, Punjab India",
     phone: "123",
-    hours: "Mon–Fri: 10:00 AM – 5:00 PM",
+    hours: "Mon–Sat: 9:00 AM – 6:00 PM",
   },
 ];
 
