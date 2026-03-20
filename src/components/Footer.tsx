@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { Scale, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import jainLogo from "/shabas-logo.png";
 
 const Footer = () => (
   <footer className="bg-brand-navy text-primary-foreground">
@@ -9,8 +10,8 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <Scale className="text-brand-saffron w-6 h-6" />
-            <span className="font-display font-bold text-lg">JAIN & ASSOCIATES</span>
+            <img src={jainLogo} alt="Jain & Associates Logo" className="w-8 h-8 object-contain brightness-0 invert" />
+            <span className="font-display font-bold text-lg text-white">JAIN & ASSOCIATES</span>
           </div>
           <p className="text-sm text-primary-foreground/60 leading-relaxed mb-6 hover:text-brand-saffron transition-brand cursor-default">
             Dedicated to providing free legal support to the underprivileged in Punjab.

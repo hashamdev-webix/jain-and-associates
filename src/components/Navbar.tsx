@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Scale, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import jainLogo from "/shabas-logo.png";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -19,9 +20,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-brand-navy rounded-xl flex items-center justify-center">
-            <Scale className="text-brand-saffron w-6 h-6" />
-          </div>
+          <img src={jainLogo} alt="Jain & Associates Logo" className="w-10 h-10 object-contain" />
           <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-brand-navy">
             JAIN <span className="text-muted-foreground">&</span> ASSOCIATES
           </span>
