@@ -9,9 +9,12 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 items-start">
         {/* Brand */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <img src={jainLogo} alt="Jain & Associates Logo" style={{ width: 30, height: 20 }} className="object-contain brightness-0 invert" />
-            <span className="font-display font-bold text-lg text-white">JAIN & ASSOCIATES</span>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={jainLogo} alt="Jain & Associates Logo" style={{ width: 60, height: 60 }} className="object-contain brightness-0 invert flex-shrink-0" />
+            <div className="flex flex-col">
+              <span className="font-display font-bold text-base leading-tight text-white tracking-wide">JAIN &</span>
+              <span className="font-display font-bold text-base leading-tight text-white tracking-wide">ASSOCIATES</span>
+            </div>
           </div>
           <p className="text-sm text-primary-foreground/60 leading-relaxed mb-6 hover:text-brand-saffron transition-brand cursor-default">
             Dedicated to providing free legal support to the underprivileged in Punjab.

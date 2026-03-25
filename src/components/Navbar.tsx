@@ -20,8 +20,8 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full z-50 bg-card/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={jainLogo} alt="Jain & Associates Logo" style={{ width: 30, height: 20 }} className="object-contain" />
-          <span className="font-display font-bold text-lg sm:text-xl tracking-tight text-brand-navy">
+          <img src={jainLogo} alt="Jain & Associates Logo" style={{ width: 60, height: 60 }} className="object-contain" />
+          <span className="font-display font-bold text-sm sm:text-base tracking-tight text-brand-navy">
             JAIN <span className="text-muted-foreground">&</span> ASSOCIATES
           </span>
         </Link>
