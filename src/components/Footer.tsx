@@ -10,7 +10,7 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={jainLogo} alt="Jain & Associates Logo" className="w-8 h-8 object-contain brightness-0 invert" />
+            <img src={jainLogo} alt="Jain & Associates Logo" style={{ width: 30, height: 20 }} className="object-contain brightness-0 invert" />
             <span className="font-display font-bold text-lg text-white">JAIN & ASSOCIATES</span>
           </div>
           <p className="text-sm text-primary-foreground/60 leading-relaxed mb-6 hover:text-brand-saffron transition-brand cursor-default">
@@ -30,7 +30,7 @@ const Footer = () => (
                 <FaFacebookF size={15} />
               </a>
               <a
-                href="https://www.instagram.com/jurisnexa/"
+                href="https://www.instagram.com/_jainandassociates_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
