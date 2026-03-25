@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import jainLogo from "/shabas-logo.png";
 
 const Footer = () => (
@@ -38,13 +38,7 @@ const Footer = () => (
               >
                 <FaInstagram size={15} />
               </a>
-              <a
-                href="/"
-                aria-label="Twitter"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 hover:bg-brand-saffron hover:text-white transition-brand"
-              >
-                <FaTwitter size={15} />
-              </a>
+
             </div>
           </div>
         </div>
