@@ -137,12 +137,6 @@ const Donate = () => {
                     <li>• Legal awareness camps in villages</li>
                   </ul>
                 </div>
-                <div className="p-6 rounded-3xl bg-navy-gradient text-primary-foreground">
-                  <h4 className="font-display font-bold mb-2">100% Transparent</h4>
-                  <p className="text-sm text-primary-foreground/60">
-                    Every donation is tracked and used exclusively for providing free legal services. We publish annual reports for full transparency.
-                  </p>
-                </div>
               </div>
             </div>
           )}

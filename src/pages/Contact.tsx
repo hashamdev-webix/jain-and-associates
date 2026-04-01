@@ -67,14 +67,28 @@ const Contact = () => {
               ))}
             </div>
 
-            <div className="p-6 rounded-3xl bg-navy-gradient text-primary-foreground">
-              <h3 className="font-display font-bold text-lg mb-2">24/7 Emergency Helpline</h3>
-              <p className="text-primary-foreground/60 text-sm mb-3">
-                For urgent legal matters, call us anytime.
-              </p>
-              <a href="tel:123" className="text-brand-saffron text-2xl font-display font-bold">
-                123
-              </a>
+            <div className="relative overflow-hidden p-8 rounded-3xl bg-gradient-to-br from-brand-navy via-brand-navy/95 to-brand-navy/90 text-white shadow-xl">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-saffron/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-brand-saffron/5 rounded-full blur-2xl"></div>
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-saffron/20 text-brand-saffron text-xs font-bold mb-4">
+                  <span className="w-2 h-2 bg-brand-saffron rounded-full animate-pulse"></span>
+                  AVAILABLE 24/7
+                </div>
+                <h3 className="font-display font-bold text-2xl mb-3 leading-tight">
+                  Need Urgent Legal Help?
+                </h3>
+                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                  Our emergency helpline is always available for critical legal matters. Don't hesitate to reach out.
+                </p>
+                <a 
+                  href="tel:123" 
+                  className="inline-flex items-center gap-3 px-6 py-3.5 bg-brand-saffron hover:bg-brand-saffron/90 text-white rounded-xl font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-lg"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call 123 Now</span>
+                </a>
+              </div>
             </div>
           </div>
 
@@ -85,65 +99,87 @@ const Contact = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="p-12 rounded-3xl bg-card border border-border text-center"
+                className="p-12 rounded-3xl bg-gradient-to-br from-brand-saffron/5 via-brand-navy/5 to-transparent border-2 border-brand-saffron/20 text-center backdrop-blur-sm"
               >
-                <div className="w-16 h-16 bg-brand-saffron/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Send className="w-8 h-8 text-brand-saffron" />
+                <div className="w-20 h-20 bg-gradient-to-br from-brand-saffron to-brand-saffron/70 rounded-full flex items-center justify-center mx-auto mb-5 shadow-lg">
+                  <Send className="w-9 h-9 text-white" />
                 </div>
-                <h3 className="text-xl font-display font-bold text-brand-navy mb-2">Message Sent!</h3>
-                <p className="text-muted-foreground">Thank you for reaching out. We'll get back to you soon.</p>
+                <h3 className="text-2xl font-display font-bold text-brand-navy mb-3">Message Sent Successfully!</h3>
+                <p className="text-muted-foreground text-base leading-relaxed max-w-sm mx-auto">
+                  Thank you for reaching out. Our team will review your message and get back to you within 24 hours.
+                </p>
                 <button
                   onClick={() => setSubmitted(false)}
-                  className="mt-6 text-brand-saffron font-bold text-sm hover:underline"
+                  className="mt-8 px-6 py-2.5 bg-brand-navy text-white rounded-full font-bold text-sm hover:opacity-90 transition-brand"
                 >
                   Send another message
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Full Name</label>
+                  <div className="relative">
+                    <label className="block text-sm font-semibold text-brand-navy mb-2">Full Name *</label>
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 rounded-2xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-brand-saffron/50 transition-brand"
-                      placeholder="Your name"
+                      className="w-full px-5 py-3.5 rounded-xl border-2 border-border bg-card text-foreground focus:outline-none focus:border-brand-saffron focus:ring-4 focus:ring-brand-saffron/10 transition-all placeholder:text-muted-foreground/50"
+                      placeholder="Enter your full name"
                     />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-1.5">Phone</label>
+                  <div className="relative">
+                    <label className="block text-sm font-semibold text-brand-navy mb-2">Phone Number *</label>
                     <input
                       type="tel"
                       required
-                      className="w-full px-4 py-3 rounded-2xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-brand-saffron/50 transition-brand"
-                      placeholder="Your phone number"
+                      className="w-full px-5 py-3.5 rounded-xl border-2 border-border bg-card text-foreground focus:outline-none focus:border-brand-saffron focus:ring-4 focus:ring-brand-saffron/10 transition-all placeholder:text-muted-foreground/50"
+                      placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Email</label>
+                <div className="relative">
+                  <label className="block text-sm font-semibold text-brand-navy mb-2">Email Address</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-2xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-brand-saffron/50 transition-brand"
-                    placeholder="Your email (optional)"
+                    className="w-full px-5 py-3.5 rounded-xl border-2 border-border bg-card text-foreground focus:outline-none focus:border-brand-saffron focus:ring-4 focus:ring-brand-saffron/10 transition-all placeholder:text-muted-foreground/50"
+                    placeholder="your.email@example.com (optional)"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">How can we help?</label>
+                <div className="relative">
+                  <label className="block text-sm font-semibold text-brand-navy mb-2">Legal Issue Category</label>
+                  <select
+                    className="w-full px-5 py-3.5 rounded-xl border-2 border-border bg-card text-foreground focus:outline-none focus:border-brand-saffron focus:ring-4 focus:ring-brand-saffron/10 transition-all"
+                  >
+                    <option value="">Select a category</option>
+                    <option value="family">Family Law</option>
+                    <option value="property">Property Disputes</option>
+                    <option value="criminal">Criminal Defense</option>
+                    <option value="civil">Civil Matters</option>
+                    <option value="consumer">Consumer Rights</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="relative">
+                  <label className="block text-sm font-semibold text-brand-navy mb-2">Describe Your Legal Issue *</label>
                   <textarea
                     required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-2xl border border-border bg-card text-foreground focus:outline-none focus:ring-2 focus:ring-brand-saffron/50 transition-brand resize-none"
-                    placeholder="Describe your legal issue..."
+                    rows={6}
+                    className="w-full px-5 py-3.5 rounded-xl border-2 border-border bg-card text-foreground focus:outline-none focus:border-brand-saffron focus:ring-4 focus:ring-brand-saffron/10 transition-all resize-none placeholder:text-muted-foreground/50"
+                    placeholder="Please provide details about your legal situation. The more information you share, the better we can assist you..."
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-brand-navy text-primary-foreground py-4 rounded-2xl font-bold hover:shadow-brand transition-brand active:scale-[0.98] flex items-center justify-center gap-2"
-                >
-                  Send Message <Send className="w-4 h-4" />
-                </button>
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-brand-navy to-brand-navy/90 text-white py-4 rounded-xl font-bold text-base hover:shadow-xl hover:shadow-brand-navy/20 transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-3 group"
+                  >
+                    <span>Send Message</span>
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <p className="text-xs text-muted-foreground text-center mt-4">
+                    We respect your privacy. Your information is secure and confidential.
+                  </p>
+                </div>
               </form>
             )}
           </div>
